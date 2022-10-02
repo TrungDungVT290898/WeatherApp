@@ -18,7 +18,6 @@ function App () {
         const response = await fetch(url)
         const data = await response.json()
         if (response.ok) {
-          let d = JSON.stringify(data)
           setWeatherInfo(
             `${data.name} ${data.sys.country}, temp:${data.main.temp}, wind: ${data.wind.speed}, ${data.weather[0].description}`
           )
